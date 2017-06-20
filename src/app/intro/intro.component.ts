@@ -13,7 +13,7 @@ export class IntroComponent implements OnInit {
 
   ngOnInit() {
     
-     $("#Header").html(this.message);
+    // $("#Header").html(this.message);
   }
 
 }
