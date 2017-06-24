@@ -1,0 +1,29 @@
+ 
+     <div class="form">
+        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" /></div>
+        <form class="register-form" >
+            <input type="text" class="form-control" placeholder="Tên đăng nhập">
+            <input type="password" placeholder="Mật khẩu" />
+            <input type="email" placeholder="Email" />
+            
+            <button>Đăng ký</button>
+            <p class="message">Đã là thành viên? <a href="#">Đăng nhập</a>
+            
+            </p>
+        </form>   
+        <form class="login-form"  name="form" (ngSubmit)="f.form.valid && loginFunction()" #f="ngForm" novalidate>    
+            <input type="text"    placeholder="Tên đăng nhập" name="username" [(ngModel)]="model.username" #username="ngModel"   required  />
+            <div *ngIf="f.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
+            <input type="password" placeholder="Mật khẩu" name="password" [(ngModel)]="model.password" #password="ngModel"   required />
+            <div *ngIf="f.submitted && !password.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
+         
+           <a class="forgotpass" href="#">Quên mật khẩu?</a>
+            <button type="submit" >Đăng nhập</button>
+            <p class="message">Chưa có tài khoản? <a href="#">Tạo mới tài khoản</a></p>
+        </form>              
+    </div>
+    <video id="video" autoplay="autoplay" loop="loop" poster="https://drscdn.500px.org/photo/32739485/q%3D80_m%3D1500/3aaaf210eabfe6d7193c91bb53c83083">
+        <source src="https://static.videezy.com/system/resources/previews/000/002/182/original/Sea-waves-video.mp4" type="video/mp4" />
+    </video>
+   
+   
