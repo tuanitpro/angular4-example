@@ -16,6 +16,7 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
 	}), http, options);
 }
 
+import { AuthGuard } from './_services/AuthGuard.service';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -25,7 +26,9 @@ import { IntroComponent } from './intro/intro.component';
 import { LoginComponent } from './login/login.component';
 
 import {AuthenticationService} from './_services/authentication.service';
+import {QuoteService} from './_services/Quote.service';
 import { QuoteComponent } from './quote/quote.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -37,7 +40,8 @@ import { QuoteComponent } from './quote/quote.component';
     MembersComponent,
     IntroComponent,
     LoginComponent,
-    QuoteComponent
+    QuoteComponent,
+    HomeComponent
 ],
   imports: [
     BrowserModule,
@@ -51,9 +55,15 @@ import { QuoteComponent } from './quote/quote.component';
           component: IntroComponent,
           
     },
+    {
+          path:'about',          
+          component: AboutComponent,
+          
+    },
       {
           path:'quote',          
           component: QuoteComponent,
+          canActivate: [AuthGuard]
           
     },
     {
@@ -67,7 +77,17 @@ import { QuoteComponent } from './quote/quote.component';
     {
           path:'product',
           component: ProductComponent,
-    }
+    },
+    {
+        path: '', 
+        component: HomeComponent, 
+        canActivate: [AuthGuard] 
+  },
+
+    // otherwise redirect to home
+    { 
+      path: '**', 
+      redirectTo: '' }
     ]),
   ],
   providers: [
@@ -76,6 +96,8 @@ import { QuoteComponent } from './quote/quote.component';
       useFactory: authHttpServiceFactory,
       deps: [Http, RequestOptions]
     },
+     AuthGuard,
+     QuoteService,
      AuthenticationService
      
   ],

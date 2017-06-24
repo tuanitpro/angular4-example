@@ -4,10 +4,10 @@
         <form class="register-form" >
             <input type="text" class="form-control" placeholder="Tên đăng nhập">
             <input type="password" placeholder="Mật khẩu" />
-            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Nhập lại mật khẩu" />
             
             <button>Đăng ký</button>
-            <p class="message">Đã là thành viên? <a href="#">Đăng nhập</a>
+            <p class="message">Đã là thành viên? <a href="javascript:void(0);">Đăng nhập</a>
             
             </p>
         </form>   
@@ -17,9 +17,11 @@
             <input type="password" placeholder="Mật khẩu" name="password" [(ngModel)]="model.password" #password="ngModel"   required />
             <div *ngIf="f.submitted && !password.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
          
-           <a class="forgotpass" href="#">Quên mật khẩu?</a>
-            <button type="submit" >Đăng nhập</button>
-            <p class="message">Chưa có tài khoản? <a href="#">Tạo mới tài khoản</a></p>
+           <a class="forgotpass" href="javascript:void(0);">Quên mật khẩu?</a>
+            <button type="submit" [disabled]="loading">Đăng nhập
+                <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            </button>
+            <p class="message">Chưa có tài khoản? <a href="javascript:void(0);">Tạo mới tài khoản</a></p>
         </form>              
     </div>
     <video id="video" autoplay="autoplay" loop="loop" poster="https://drscdn.500px.org/photo/32739485/q%3D80_m%3D1500/3aaaf210eabfe6d7193c91bb53c83083">

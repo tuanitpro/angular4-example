@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     });
   }
   loginFunction(){
+     this.loading = true;
     var username = this.model.username;
     var password  =this.model.password;
      this.authenticationService.login(username, password).subscribe(response=>{
@@ -37,10 +38,12 @@ export class LoginComponent implements OnInit {
          }
          else{
            console.log('Cannot login');
+            this.loading = false;
          }
        }
      }, error=>{
        console.log("Cannot login");
+        this.loading = false;
      });  
   }
 
