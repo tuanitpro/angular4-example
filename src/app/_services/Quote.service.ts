@@ -21,7 +21,7 @@ fetchAll():Observable<any>{
             headers: headers,
             method: RequestMethod.Get          
     });
-  return   this.http.get('http://ec2-52-27-149-161.us-west-2.compute.amazonaws.com/api/v1/quotes/search?q=', options)
+  return   this.http.get('http://localhost/api/v1/quotes/search?q=', options)
     .map( (response: Response) => response.json() ).catch((error:any)=>{
          return Observable.throw(new Error(error.status));
     });

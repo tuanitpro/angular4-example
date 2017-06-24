@@ -5,6 +5,7 @@ import $ from 'jquery/dist/jquery.min';
 
 import {Login} from '../_models/user';
 import {AuthenticationService} from '../_services/authentication.service';
+import {AccountService} from '../_services/Account.service';
 
 @Component({
   selector: 'app-login',
@@ -13,16 +14,18 @@ import {AuthenticationService} from '../_services/authentication.service';
 })
 export class LoginComponent implements OnInit {  
   model: any = {};
+  registerModel:any = {}
   loading = false;
   returnUrl: string;
   constructor(
-     private router: Router,
-    private authenticationService: AuthenticationService
-      ) { 
+    private router: Router,
+    private authenticationService: AuthenticationService,
+    private accountService: AccountService) { 
      
    }
 
   ngOnInit() {
+     this.authenticationService.logout();
     $('.message a').click(function () {
                 $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
     });
@@ -37,14 +40,36 @@ export class LoginComponent implements OnInit {
             this.router.navigate(['/']);
          }
          else{
+            
+            this.loading = false;
+         }
+       }
+     }, error=>{
+       console.log(error);
+        this.loading = false;
+     });  
+  }
+  registerFunction(){
+      this.loading = true;
+    var username = this.registerModel.username;
+    var password  =this.registerModel.password;
+    var confirmpassword  =this.registerModel.confirmpassword;
+    
+     
+       this.accountService.register(username, password, confirmpassword).subscribe(response=>{
+       if(response !=undefined && response !=null){
+         if(response ===true){
+
+           // this.router.navigate(['/']);
+         }
+         else{
            console.log('Cannot login');
             this.loading = false;
          }
        }
      }, error=>{
-       console.log("Cannot login");
+       console.log(error);
         this.loading = false;
-     });  
+     });
   }
-
 }
