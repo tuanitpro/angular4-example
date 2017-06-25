@@ -28,6 +28,7 @@ import {AuthenticationService} from './_helpers/authentication.service';
 import {QuoteService} from './_services/Quote.service';
 import {AccountService} from './_services/Account.service';
 import {PagesService} from './_services/Pages.service';
+import {BlogService} from './_services/Blog.service';
 
 
 import { AppComponent } from './app.component';
@@ -48,6 +49,8 @@ import { HeaderComponent } from './header/header.component';
 import { BlogComponent } from './blog/blog.component';
 import { PagesComponent } from './pages/pages.component';
 import { CartComponent } from './cart/cart.component';
+ 
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 
 
@@ -68,7 +71,9 @@ import { CartComponent } from './cart/cart.component';
     HeaderComponent,
     BlogComponent,
     PagesComponent,
-    CartComponent
+    CartComponent,
+    
+    BlogDetailComponent
 ],
   imports: [
     BrowserModule,
@@ -122,6 +127,10 @@ import { CartComponent } from './cart/cart.component';
           path:'blog',
           component: BlogComponent,
     },
+     {
+          path:'blog/:id',
+          component: BlogDetailComponent,
+    },
     {
           path:'cart',
           component: CartComponent,
@@ -156,7 +165,8 @@ import { CartComponent } from './cart/cart.component';
      PagerService,
      AccountService,
      AuthenticationService,
-     PagesService
+     PagesService,
+     BlogService
      
   ],
   bootstrap: [AppComponent]

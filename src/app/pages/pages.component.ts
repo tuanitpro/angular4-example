@@ -38,7 +38,7 @@ export class PagesComponent implements OnInit {
    
   }
   getPage(pageId:string){
- this.pageService.getById(pageId).subscribe(response=>{
+  this.pageService.getById(pageId).subscribe(response=>{
               this.model = response;
                 this.titleService.setTitle(response.Name);
             }, error=>{

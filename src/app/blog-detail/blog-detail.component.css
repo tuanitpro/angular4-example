@@ -1,0 +1,22 @@
+ @media screen and (min-width: 750px) { 
+    #ArticleImage-155778 {
+      max-width: 345px;
+      max-height: 229.94384765625px;
+    }
+    #ArticleImageWrapper-155778 {
+      max-width: 345px;
+      max-height: 229.94384765625px;
+    }
+   } 
+  
+  
+    
+    @media screen and (max-width: 749px) {
+      #ArticleImage-155778 {
+        max-width: 750px;
+        max-height: 750px;
+      }
+      #ArticleImageWrapper-155778 {
+        max-width: 750px;
+      }
+    }

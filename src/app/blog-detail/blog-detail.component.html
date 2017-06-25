@@ -1,0 +1,34 @@
+<link href="//cdn.shopify.com/s/files/1/1915/7383/t/2/assets/theme.scss.css?11817818641660261022" rel="stylesheet" type="text/css" media="all">
+
+
+
+<app-header></app-header>
+ 
+<div class="page-container drawer-page-content"  >
+
+<main class="main-content" id="MainContent" role="main">
+<div class="page-width">
+<div class="grid">
+<div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+<div class="section-header text-center">
+  <h1>{{model.Name}}</h1>
+</div>
+
+<div class="rte">
+  <div [innerHTML]="model.FullText"></div>
+</div>
+</div>
+</div>
+
+<div class="text-center return-link-wrapper">
+  <a routerLink="/blog" class="btn btn--secondary btn--has-icon-before return-link">
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 20 8"><path d="M4.814 7.555C3.95 6.61 3.2 5.893 2.568 5.4 1.937 4.91 1.341 4.544.781 4.303v-.44a9.933 9.933 0 0 0 1.875-1.196c.606-.485 1.328-1.196 2.168-2.134h.752c-.612 1.309-1.253 2.315-1.924 3.018H19.23v.986H3.652c.495.632.84 1.1 1.036 1.406.195.306.485.843.869 1.612h-.743z" fill="#000" fill-rule="evenodd"></path></svg>
+    Quay lại Blog
+  </a>
+</div>
+
+</div>
+</main>
+
+
+<app-footer></app-footer>

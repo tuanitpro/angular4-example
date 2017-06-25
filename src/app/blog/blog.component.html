@@ -11,7 +11,7 @@
 
 <div class="page-width">
   <header class="section-header text-center">
-    <h1>Stories</h1>
+    <h1>{{title}}</h1>
     
   </header>
 </div>
@@ -20,67 +20,39 @@
   
     <div class="page-width">
       <div class="grid grid--uniform grid--blog">
-        
-          <div class="grid__item medium-up--one-third">
+         
+          <div class="grid__item medium-up--one-third"  *ngFor="let item of blogs">
             
-              
-              
-<style>
+ 
   
-  
-  @media screen and (min-width: 750px) { 
-    #ArticleImage-155778 {
-      max-width: 345px;
-      max-height: 229.94384765625px;
-    }
-    #ArticleImageWrapper-155778 {
-      max-width: 345px;
-      max-height: 229.94384765625px;
-    }
-   } 
-  
-  
-    
-    @media screen and (max-width: 749px) {
-      #ArticleImage-155778 {
-        max-width: 750px;
-        max-height: 750px;
-      }
-      #ArticleImageWrapper-155778 {
-        max-width: 750px;
-      }
-    }
-  
-</style>
+ 
 
 
               <div id="ArticleImageWrapper-155778" class="article__grid-image-wrapper js">
-                <a href="/blogs/stories/for-the-love-of-wood" style="padding-top:66.650390625%;" class="article__grid-image-container">
+                <a  [routerLink]="['/blog', item.Id]" style="padding-top:66.650390625%;" class="article__grid-image-container">
                   <img id="ArticleImage-155778" class="article__grid-image lazyautosizes lazyloaded" src="//cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_300x300.jpg?v=1493402567" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="1.5003663003663004" data-sizes="auto" alt="Table assembly" data-srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_180x.jpg?v=1493402567 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_360x.jpg?v=1493402567 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_540x.jpg?v=1493402567 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_720x.jpg?v=1493402567 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_900x.jpg?v=1493402567 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1080x.jpg?v=1493402567 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1296x.jpg?v=1493402567 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1512x.jpg?v=1493402567 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1728x.jpg?v=1493402567 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_2048x.jpg?v=1493402567 2048w" sizes="343px" srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_180x.jpg?v=1493402567 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_360x.jpg?v=1493402567 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_540x.jpg?v=1493402567 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_720x.jpg?v=1493402567 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_900x.jpg?v=1493402567 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1080x.jpg?v=1493402567 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1296x.jpg?v=1493402567 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1512x.jpg?v=1493402567 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_1728x.jpg?v=1493402567 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_2048x.jpg?v=1493402567 2048w">
                 </a>
               </div>
 
-              <noscript>
-                &lt;a href="/blogs/stories/for-the-love-of-wood" class="article__grid-image-wrapper"&gt;
-                  &lt;img src="//cdn.shopify.com/s/files/1/1915/7383/articles/e0e65197-890e-488d-9bb3-3888b38db9cd_2048x2048_2048x2048_15ede516-0869-4cf8-a869-a82f98c2275f_345x@2x.jpg?v=1493402567" alt="For the Love of Wood" class="article__grid-image" /&gt;
-                &lt;/a&gt;
-              </noscript>
+             
             
 
             <div class="article__grid-meta article__grid-meta--has-image">
               <h2 class="article__title h3">
-                <a href="/blogs/stories/for-the-love-of-wood">For the Love of Wood</a>
+                <a [routerLink]="['/blog', item.Id]"  >{{item.Name}}</a>
               </h2>
 
               
-                <span class="article__author">by Guillaume Granger</span>
+                <span class="article__author">by {{item.Author}}</span>
               
 
               
 
               <div class="rte article__grid-excerpt">
                 
-                  <meta charset="utf-8"><span style="font-weight: 400;">Beautiful and durable—oak holds a special place in our hearts. From the bent curves of Lars Beller Fjetland's Drifted collection.</span>
+                  <meta charset="utf-8"><span style="font-weight: 400;">
+                  {{item.Description}} 
+                  </span>
                 
               </div>
 
@@ -88,8 +60,8 @@
 
               <ul class="list--inline">
                 <li>
-                  <a href="/blogs/stories/for-the-love-of-wood" class="btn btn--secondary btn--small">
-                    Read more
+                 <a [routerLink]="['/blog', item.Id]" class="btn btn--secondary btn--small">
+                   Chi tiết
                   </a>
                 </li>
 
@@ -98,314 +70,9 @@
             </div>
           </div>
         
-          <div class="grid__item medium-up--one-third">
-            
-              
-              
-<style>
-  
-  
-  @media screen and (min-width: 750px) { 
-    #ArticleImage-155586 {
-      max-width: 345px;
-      max-height: 233.12761506276152px;
-    }
-    #ArticleImageWrapper-155586 {
-      max-width: 345px;
-      max-height: 233.12761506276152px;
-    }
-   } 
-  
-  
-    
-    @media screen and (max-width: 749px) {
-      #ArticleImage-155586 {
-        max-width: 750px;
-        max-height: 750px;
-      }
-      #ArticleImageWrapper-155586 {
-        max-width: 750px;
-      }
-    }
-  
-</style>
-
-
-              <div id="ArticleImageWrapper-155586" class="article__grid-image-wrapper js">
-                <a href="/blogs/stories/welcome-home-hem-founder-petrus-palmer" style="padding-top:67.57322175732217%;" class="article__grid-image-container">
-                  <img id="ArticleImage-155586" class="article__grid-image lazyautosizes lazyloaded" src="//cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_300x300.jpg?v=1492544606" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="1.479876160990712" data-sizes="auto" alt="Petrus chair" data-srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_180x.jpg?v=1492544606 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_360x.jpg?v=1492544606 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_540x.jpg?v=1492544606 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_720x.jpg?v=1492544606 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_900x.jpg?v=1492544606 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1080x.jpg?v=1492544606 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1296x.jpg?v=1492544606 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1512x.jpg?v=1492544606 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1728x.jpg?v=1492544606 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_2048x.jpg?v=1492544606 2048w" sizes="343px" srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_180x.jpg?v=1492544606 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_360x.jpg?v=1492544606 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_540x.jpg?v=1492544606 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_720x.jpg?v=1492544606 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_900x.jpg?v=1492544606 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1080x.jpg?v=1492544606 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1296x.jpg?v=1492544606 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1512x.jpg?v=1492544606 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_1728x.jpg?v=1492544606 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_2048x.jpg?v=1492544606 2048w">
-                </a>
-              </div>
-
-              <noscript>
-                &lt;a href="/blogs/stories/welcome-home-hem-founder-petrus-palmer" class="article__grid-image-wrapper"&gt;
-                  &lt;img src="//cdn.shopify.com/s/files/1/1915/7383/articles/PETRUS_8506_2048x2048_0d0a478a-f488-42f0-82e4-884e2f651166_345x@2x.jpg?v=1492544606" alt="Welcome Home, Hem founder Petrus Palmér" class="article__grid-image" /&gt;
-                &lt;/a&gt;
-              </noscript>
-            
-
-            <div class="article__grid-meta article__grid-meta--has-image">
-              <h2 class="article__title h3">
-                <a href="/blogs/stories/welcome-home-hem-founder-petrus-palmer">Welcome Home, Hem founder Petrus Palmér</a>
-              </h2>
-
-              
-                <span class="article__author">by Melissa Perreault</span>
-              
-
-              
-
-              <div class="rte article__grid-excerpt">
-                
-                  <meta charset="utf-8"><span style="font-weight: 400;">&#65279;Hem means home, and home is where the heart is. For Hem founder Petrus Palmér and his family, home is located in a remodeled blacksmith’s workshop situated in the Stockholm city center.</span>
-                
-              </div>
-
-              
-
-              <ul class="list--inline">
-                <li>
-                  <a href="/blogs/stories/welcome-home-hem-founder-petrus-palmer" class="btn btn--secondary btn--small">
-                    Read more
-                  </a>
-                </li>
-
-                
-              </ul>
-            </div>
-          </div>
+          
         
-          <div class="grid__item medium-up--one-third">
-            
-              
-              
-<style>
-  
-  
-  @media screen and (min-width: 750px) { 
-    #ArticleImage-155458 {
-      max-width: 345px;
-      max-height: 232.97607421875px;
-    }
-    #ArticleImageWrapper-155458 {
-      max-width: 345px;
-      max-height: 232.97607421875px;
-    }
-   } 
-  
-  
-    
-    @media screen and (max-width: 749px) {
-      #ArticleImage-155458 {
-        max-width: 750px;
-        max-height: 750px;
-      }
-      #ArticleImageWrapper-155458 {
-        max-width: 750px;
-      }
-    }
-  
-</style>
-
-
-              <div id="ArticleImageWrapper-155458" class="article__grid-image-wrapper js">
-                <a href="/blogs/stories/hem-pro-is-here-br-lets-get-down-to-business" style="padding-top:67.529296875%;" class="article__grid-image-container">
-                  <img id="ArticleImage-155458" class="article__grid-image lazyautosizes lazyloaded" src="//cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_300x300.jpg?v=1492544685" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="1.4808387563268257" data-sizes="auto" alt="Hem Pro" data-srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_180x.jpg?v=1492544685 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_360x.jpg?v=1492544685 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_540x.jpg?v=1492544685 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_720x.jpg?v=1492544685 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_900x.jpg?v=1492544685 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1080x.jpg?v=1492544685 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1296x.jpg?v=1492544685 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1512x.jpg?v=1492544685 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1728x.jpg?v=1492544685 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_2048x.jpg?v=1492544685 2048w" sizes="343px" srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_180x.jpg?v=1492544685 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_360x.jpg?v=1492544685 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_540x.jpg?v=1492544685 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_720x.jpg?v=1492544685 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_900x.jpg?v=1492544685 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1080x.jpg?v=1492544685 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1296x.jpg?v=1492544685 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1512x.jpg?v=1492544685 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_1728x.jpg?v=1492544685 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_2048x.jpg?v=1492544685 2048w">
-                </a>
-              </div>
-
-              <noscript>
-                &lt;a href="/blogs/stories/hem-pro-is-here-br-lets-get-down-to-business" class="article__grid-image-wrapper"&gt;
-                  &lt;img src="//cdn.shopify.com/s/files/1/1915/7383/articles/CChavarria_Everlane_Headquarters_Hi_Res_30_2048x2048_b6c521dd-9d07-4375-9e84-7e95649e67fb_345x@2x.jpg?v=1492544685" alt="Hem Pro is here. Let&amp;#39;s get down to business!" class="article__grid-image" /&gt;
-                &lt;/a&gt;
-              </noscript>
-            
-
-            <div class="article__grid-meta article__grid-meta--has-image">
-              <h2 class="article__title h3">
-                <a href="/blogs/stories/hem-pro-is-here-br-lets-get-down-to-business">Hem Pro is here. Let's get down to business!</a>
-              </h2>
-
-              
-                <span class="article__author">by Guillaume Granger</span>
-              
-
-              
-
-              <div class="rte article__grid-excerpt">
-                
-                  <meta charset="utf-8"><meta charset="utf-8"><span>Hem Pro is our dedicated tool for interior professionals to browse our products, place orders with trade pricing, and get access to real time inventory.</span>
-                
-              </div>
-
-              
-
-              <ul class="list--inline">
-                <li>
-                  <a href="/blogs/stories/hem-pro-is-here-br-lets-get-down-to-business" class="btn btn--secondary btn--small">
-                    Read more
-                  </a>
-                </li>
-
-                
-              </ul>
-            </div>
-          </div>
-        
-          <div class="grid__item medium-up--one-third">
-            
-              
-              
-<style>
-  
-  
-  @media screen and (min-width: 750px) { 
-    #ArticleImage-155394 {
-      max-width: 345px;
-      max-height: 230.11230468749997px;
-    }
-    #ArticleImageWrapper-155394 {
-      max-width: 345px;
-      max-height: 230.11230468749997px;
-    }
-   } 
-  
-  
-    
-    @media screen and (max-width: 749px) {
-      #ArticleImage-155394 {
-        max-width: 750px;
-        max-height: 750px;
-      }
-      #ArticleImageWrapper-155394 {
-        max-width: 750px;
-      }
-    }
-  
-</style>
-
-
-              <div id="ArticleImageWrapper-155394" class="article__grid-image-wrapper js">
-                <a href="/blogs/stories/test-2" style="padding-top:66.69921875%;" class="article__grid-image-container">
-                  <img id="ArticleImage-155394" class="article__grid-image lazyautosizes lazyloaded" src="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_300x300.jpg?v=1492544697" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="1.499267935578331" data-sizes="auto" alt="Hem HQ" data-srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_180x.jpg?v=1492544697 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_360x.jpg?v=1492544697 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_540x.jpg?v=1492544697 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_720x.jpg?v=1492544697 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_900x.jpg?v=1492544697 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1080x.jpg?v=1492544697 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1296x.jpg?v=1492544697 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1512x.jpg?v=1492544697 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1728x.jpg?v=1492544697 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_2048x.jpg?v=1492544697 2048w" sizes="343px" srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_180x.jpg?v=1492544697 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_360x.jpg?v=1492544697 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_540x.jpg?v=1492544697 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_720x.jpg?v=1492544697 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_900x.jpg?v=1492544697 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1080x.jpg?v=1492544697 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1296x.jpg?v=1492544697 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1512x.jpg?v=1492544697 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_1728x.jpg?v=1492544697 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_2048x.jpg?v=1492544697 2048w">
-                </a>
-              </div>
-
-              <noscript>
-                &lt;a href="/blogs/stories/test-2" class="article__grid-image-wrapper"&gt;
-                  &lt;img src="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM_3771_2048x2048_3231e999-d90d-4121-9989-3fa8a96f761e_345x@2x.jpg?v=1492544697" alt="No Place like Home—Hem HQ and Showroom opening!" class="article__grid-image" /&gt;
-                &lt;/a&gt;
-              </noscript>
-            
-
-            <div class="article__grid-meta article__grid-meta--has-image">
-              <h2 class="article__title h3">
-                <a href="/blogs/stories/test-2">No Place like Home—Hem HQ and Showroom opening!</a>
-              </h2>
-
-              
-                <span class="article__author">by Melissa Perreault</span>
-              
-
-              
-
-              <div class="rte article__grid-excerpt">
-                
-                  <meta charset="utf-8">
-<div class="rte rte--indented-images"><span style="font-weight: 400;">Hem’s brand new home is located in the center of Stockholm, smack in the middle of the beautiful green space Vasaparken.</span></div>
-                
-              </div>
-
-              
-
-              <ul class="list--inline">
-                <li>
-                  <a href="/blogs/stories/test-2" class="btn btn--secondary btn--small">
-                    Read more
-                  </a>
-                </li>
-
-                
-              </ul>
-            </div>
-          </div>
-        
-          <div class="grid__item medium-up--one-third">
-            
-              
-              
-<style>
-  
-  
-  @media screen and (min-width: 750px) { 
-    #ArticleImage-155714 {
-      max-width: 345px;
-      max-height: 276.26953125px;
-    }
-    #ArticleImageWrapper-155714 {
-      max-width: 345px;
-      max-height: 276.26953125px;
-    }
-   } 
-  
-  
-    
-    @media screen and (max-width: 749px) {
-      #ArticleImage-155714 {
-        max-width: 750px;
-        max-height: 750px;
-      }
-      #ArticleImageWrapper-155714 {
-        max-width: 750px;
-      }
-    }
-  
-</style>
-
-
-              <div id="ArticleImageWrapper-155714" class="article__grid-image-wrapper js">
-                <a href="/blogs/stories/inside-ice-cream-social" style="padding-top:80.078125%;" class="article__grid-image-container">
-                  <img id="ArticleImage-155714" class="article__grid-image lazyautosizes lazyloaded" src="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_300x300.jpg?v=1493402524" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-aspectratio="1.248780487804878" data-sizes="auto" alt="Stool Splatter" data-srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_180x.jpg?v=1493402524 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_360x.jpg?v=1493402524 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_540x.jpg?v=1493402524 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_720x.jpg?v=1493402524 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_900x.jpg?v=1493402524 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1080x.jpg?v=1493402524 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1296x.jpg?v=1493402524 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1512x.jpg?v=1493402524 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1728x.jpg?v=1493402524 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_2048x.jpg?v=1493402524 2048w" sizes="343px" srcset="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_180x.jpg?v=1493402524 180w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_360x.jpg?v=1493402524 360w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_540x.jpg?v=1493402524 540w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_720x.jpg?v=1493402524 720w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_900x.jpg?v=1493402524 900w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1080x.jpg?v=1493402524 1080w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1296x.jpg?v=1493402524 1296w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1512x.jpg?v=1493402524 1512w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_1728x.jpg?v=1493402524 1728w, //cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_2048x.jpg?v=1493402524 2048w">
-                </a>
-              </div>
-
-              <noscript>
-                &lt;a href="/blogs/stories/inside-ice-cream-social" class="article__grid-image-wrapper"&gt;
-                  &lt;img src="//cdn.shopify.com/s/files/1/1915/7383/articles/HEM7002_copy_2048x2048_54f9ef26-7465-4102-9ee3-bfc1465158f1_345x@2x.jpg?v=1493402524" alt="Inside Ice Cream Social" class="article__grid-image" /&gt;
-                &lt;/a&gt;
-              </noscript>
-            
-
-            <div class="article__grid-meta article__grid-meta--has-image">
-              <h2 class="article__title h3">
-                <a href="/blogs/stories/inside-ice-cream-social">Inside Ice Cream Social</a>
-              </h2>
-
-              
-                <span class="article__author">by Melissa Perreault</span>
-              
-
-              
-
-              <div class="rte article__grid-excerpt">
-                
-                  <meta charset="utf-8"><span>What a week! For those of you who are unable to join us for design&nbsp;and ice cream in Milan, here’s a few snapshots from the exhibition and events.</span>
-                
-              </div>
-
-              
-
-              <ul class="list--inline">
-                <li>
-                  <a href="/blogs/stories/inside-ice-cream-social" class="btn btn--secondary btn--small">
-                    Read more
-                  </a>
-                </li>
-
-                
-              </ul>
-            </div>
-          </div>
+          
         
       </div>
     </div>
