@@ -20,6 +20,7 @@ import { AuthGuard } from './_services/AuthGuard.service';
 import {AuthenticationService} from './_services/authentication.service';
 import {QuoteService} from './_services/Quote.service';
 import {AccountService} from './_services/Account.service';
+import {PagerService} from './_services/Pager.service';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -31,7 +32,7 @@ import { LoginComponent } from './login/login.component';
 
 import { QuoteComponent } from './quote/quote.component';
 import { HomeComponent } from './home/home.component';
-import { QuotedetailComponent } from './quotedetail/quotedetail.component';
+import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 
 
 
@@ -45,7 +46,7 @@ import { QuotedetailComponent } from './quotedetail/quotedetail.component';
     LoginComponent,
     QuoteComponent,
     HomeComponent,
-    QuotedetailComponent
+    QuoteDetailComponent
 ],
   imports: [
     BrowserModule,
@@ -67,14 +68,13 @@ import { QuotedetailComponent } from './quotedetail/quotedetail.component';
       {
           path:'quote',          
           component: QuoteComponent,
-          canActivate: [AuthGuard]
+          canActivate: [AuthGuard],
+          
           
     },
-    {
-          path:'quote/:id',          
-          component: QuotedetailComponent,
-          canActivate: [AuthGuard]
-          
+     {
+          path:'quote/:id',
+          component: QuoteDetailComponent,
     },
     {
           path:'member',
@@ -91,6 +91,7 @@ import { QuotedetailComponent } from './quotedetail/quotedetail.component';
     {
         path: '', 
         component: HomeComponent, 
+        pathMatch: 'full', 
         canActivate: [AuthGuard] 
   },
 
@@ -108,6 +109,7 @@ import { QuotedetailComponent } from './quotedetail/quotedetail.component';
     },
      AuthGuard,
      QuoteService,
+     PagerService,
      AccountService,
      AuthenticationService
      

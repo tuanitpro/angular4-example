@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class AuthenticationService {
- private baseServiceURL:string = 'http://localhost/oauth2/token';
+ private baseServiceURL:string = 'http://ec2-52-27-149-161.us-west-2.compute.amazonaws.com/oauth2/token';
  
  constructor(private http: Http) {    }
  

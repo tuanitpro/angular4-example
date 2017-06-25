@@ -6,7 +6,7 @@ import $ from 'jquery/dist/jquery.min';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-title="Home";
+title="Tuấn Lê Thanh";
   constructor() { }
 
   ngOnInit() {

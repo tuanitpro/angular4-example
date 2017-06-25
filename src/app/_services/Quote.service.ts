@@ -10,9 +10,10 @@ import {Quote} from '../_models/quote';
 
 @Injectable()
 export class QuoteService {
-
+ private baseServiceURL:string = 'http://ec2-52-27-149-161.us-west-2.compute.amazonaws.com/api/v1';
+ 
 constructor(public authHttp: AuthHttp, public http:Http) { }
-fetchAll():Observable<any>{
+fetchAll(page:number):Observable<any>{
      let headers = new Headers({        
         'Content-Type':'application/x-www-form-urlencoded',
         'Authorization' :'Bearer '+ sessionStorage.getItem('token')
@@ -21,9 +22,26 @@ fetchAll():Observable<any>{
             headers: headers,
             method: RequestMethod.Get          
     });
-  return   this.http.get('http://localhost/api/v1/quotes/search?q=', options)
+    let apiUrl = this.baseServiceURL + '/quotes/search?q=&page='+page+'&pageSize=25';
+  return   this.http.get(apiUrl, options)
     .map( (response: Response) => response.json() ).catch((error:any)=>{
          return Observable.throw(new Error(error.status));
     });
   }
+
+ getById(id: number):Observable<any> {
+           let headers = new Headers({        
+        'Content-Type':'application/x-www-form-urlencoded',
+        'Authorization' :'Bearer '+ sessionStorage.getItem('token')
+    });
+     let options = new RequestOptions({
+            headers: headers,
+            method: RequestMethod.Get          
+    });
+      let apiUrl = this.baseServiceURL + '/quotes/'+id;
+  return   this.http.get(apiUrl, options)
+    .map( (response: Response) => response.json() ).catch((error:any)=>{
+         return Observable.throw(new Error(error.status));
+    });
+    }
 }

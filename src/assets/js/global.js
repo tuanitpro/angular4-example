@@ -8,7 +8,8 @@ $( function() {
 	
 // Add background image
 	$.backstretch('assets/images/road2.jpg');
-	var endDate = "December 27, 2017 15:03:25";
+	
+ var endDate = "December 27, 2017 15:03:25";
 	$('.countdown.simple').countdown({ date: endDate });
 	$('.countdown.styled').countdown({
 	  date: endDate,
@@ -27,5 +28,4 @@ $( function() {
 	}).on("click", function() {
 	  $(this).removeClass('ended').data('countdown').update(+(new Date) + 10000).start();
 	});
-
 });

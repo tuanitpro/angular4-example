@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import $ from 'jquery/dist/jquery.min';
+ 
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
@@ -14,6 +15,7 @@ export class IntroComponent implements OnInit {
   ngOnInit() {
     
     // $("#Header").html(this.message);
+   
   }
 
 }

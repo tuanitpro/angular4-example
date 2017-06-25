@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AccountService {
 
-private baseServiceURL:string = 'http://localhost/api/v1/account/register';
+private baseServiceURL:string = 'http://ec2-52-27-149-161.us-west-2.compute.amazonaws.com/api/v1/account/register';
  
 constructor(private http: Http) {    }
 register(username:string,password:string,confirmpassword:string): Observable<any>{
