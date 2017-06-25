@@ -37,11 +37,11 @@
     Password: 123456</p>   
     </form>         
 
-    <form class="forgotpassword-form" style="display:none" name="form" (ngSubmit)="f.form.valid && forgotPasswordFunction()" #f="ngForm" novalidate>    
+    <form class="forgotpassword-form" style="display:none" name="forgotpassword" (ngSubmit)="t.form.valid && forgotPasswordFunction()" #t="ngForm" novalidate>    
        <p class="info">Để khôi phục lại mật khẩu, vui lòng nhập tên đăng nhập của bạn.</p>
        <br/> <br/>
-        <input type="username"  class="form-control"  placeholder="Tên đăng nhập" name="username" [(ngModel)]="model.username" #username="ngModel"   required  />
-        <div *ngIf="f.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
+        <input type="username"  class="form-control"  placeholder="Tên đăng nhập" name="username" [(ngModel)]="forgotPasswordModel.username" #username="ngModel"   required  />
+        <div *ngIf="t.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
          
         
         <button type="submit" [disabled]="loading">Gửi yêu cầu

@@ -24,7 +24,7 @@ public title:string;
   ngOnInit() {
     
      
-      this.quoteId=   Number(this.route.snapshot.params['id']);
+       this.quoteId=   Number(this.route.snapshot.params['id']);
          return this.quoteService.getById(this.quoteId).subscribe(response=>{           
           this.quote = response;
           this.title = response.Author;

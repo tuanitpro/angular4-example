@@ -14,7 +14,8 @@ import {AccountService} from '../_services/Account.service';
 })
 export class LoginComponent implements OnInit {  
   model: any = {};
-  registerModel:any = {}
+  registerModel:any = {};
+  forgotPasswordModel:any ={};
   loading = false;
   returnUrl: string;
   constructor(
