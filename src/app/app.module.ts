@@ -5,6 +5,7 @@ import { FormsModule }    from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { Http, Headers, Response, RequestOptions, RequestMethod } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 
@@ -16,11 +17,16 @@ export function authHttpServiceFactory(http: Http, options: RequestOptions) {
 	}), http, options);
 }
 
-import { AuthGuard } from './_services/AuthGuard.service';
-import {AuthenticationService} from './_services/authentication.service';
+/* HELPERS */
+import { GlobalService } from './_helpers/Global.service';
+import { AuthGuard } from './_helpers/AuthGuard.service';
+import {PagerService} from './_helpers/Pager.service';
+import {AuthenticationService} from './_helpers/authentication.service';
+
+/* APP_API */
 import {QuoteService} from './_services/Quote.service';
 import {AccountService} from './_services/Account.service';
-import {PagerService} from './_services/Pager.service';
+
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -107,6 +113,7 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
       useFactory: authHttpServiceFactory,
       deps: [Http, RequestOptions]
     },
+     GlobalService,
      AuthGuard,
      QuoteService,
      PagerService,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {QuoteService} from '../_services/Quote.service';
-import {PagerService} from '../_services/Pager.service';
+import {PagerService} from '../_helpers/Pager.service';
 import {Quote} from '../_models/quote';
 @Component({
   selector: 'app-quote',

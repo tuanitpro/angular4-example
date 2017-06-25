@@ -1,40 +1,61 @@
- 
-     <div class="form">
-        <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg" /></div>
-        <form class="register-form" name="registerForm" (ngSubmit)="r.form.valid && registerFunction()" #r="ngForm" novalidate>    
-            <input type="text" class="form-control" placeholder="Tên đăng nhập" name="username" [(ngModel)]="registerModel.username" #username="ngModel"   required>
-            <div *ngIf="r.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
-             <input type="password" placeholder="Mật khẩu" name="password" [(ngModel)]="registerModel.password" #password="ngModel"   required />
-            <div *ngIf="r.submitted && !password.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
-         
-            <input type="password" placeholder="Nhập lại mật khẩu" name="confirmpassword" [(ngModel)]="registerModel.confirmpassword" #confirmpassword="ngModel"   required />
-            <div *ngIf="r.submitted && !confirmpassword.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
-         
-            <button type="submit" [disabled]="loading">Đăng ký
-              <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-            </button>
-            <p class="message">Đã là thành viên? <a href="javascript:void(0);">Đăng nhập</a>
-            
-            </p>
-        </form>   
 
-        <form class="login-form"  name="form" (ngSubmit)="f.form.valid && loginFunction()" #f="ngForm" novalidate>    
-            <input type="text"    placeholder="Tên đăng nhập" name="username" [(ngModel)]="model.username" #username="ngModel"   required  />
-            <div *ngIf="f.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
-            <input type="password" placeholder="Mật khẩu" name="password" [(ngModel)]="model.password" #password="ngModel"   required />
-            <div *ngIf="f.submitted && !password.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
-         
-           <a class="forgotpass" href="javascript:void(0);">Quên mật khẩu?</a>
-            <button type="submit" [disabled]="loading">Đăng nhập
-                <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-            </button>
-            <p class="message">Chưa có tài khoản? <a href="javascript:void(0);">Tạo mới tài khoản</a></p>
-        </form>           
-        <p class="message">Username: tuanitpro<br/>
-        Password: 123456</p>   
+    <div class="form">
+    <div class="thumbnail">
+        
+    <i class="fa fa-diamond fa-5x"></i>
     </div>
-    <video id="video" autoplay="autoplay" loop="loop" poster="https://drscdn.500px.org/photo/32739485/q%3D80_m%3D1500/3aaaf210eabfe6d7193c91bb53c83083">
-        <source src="https://static.videezy.com/system/resources/previews/000/002/182/original/Sea-waves-video.mp4" type="video/mp4" />
-    </video>
-   
-   
+    <form class="register-form" name="registerForm" (ngSubmit)="r.form.valid && registerFunction()" #r="ngForm" novalidate>    
+        <input type="text" class="form-control" placeholder="Tên đăng nhập" name="username" [(ngModel)]="registerModel.username" #username="ngModel"   required>
+        <div *ngIf="r.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
+            <input type="password"  class="form-control" placeholder="Mật khẩu" name="password" [(ngModel)]="registerModel.password" #password="ngModel"   required />
+        <div *ngIf="r.submitted && !password.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
+        
+        <input type="password"  class="form-control" placeholder="Nhập lại mật khẩu" name="confirmpassword" [(ngModel)]="registerModel.confirmpassword" #confirmpassword="ngModel"   required />
+        <div *ngIf="r.submitted && !confirmpassword.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
+        
+        <button type="submit" [disabled]="loading">Đăng ký
+            <i *ngIf="loading" class="fa fa-spinner fa-spin" aria-hidden="true"></i>       
+        </button>
+        <p class="message">Đã là thành viên? <a href="javascript:void(0);" class="back-login">Đăng nhập</a>
+        
+        </p>
+    </form>   
+
+    <form class="login-form"  name="form" (ngSubmit)="f.form.valid && loginFunction()" #f="ngForm" novalidate>    
+        <input type="text"  class="form-control"  placeholder="Tên đăng nhập" name="username" [(ngModel)]="model.username" #username="ngModel"   required  />
+        <div *ngIf="f.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
+        <input type="password" class="form-control" placeholder="Mật khẩu" name="password" [(ngModel)]="model.password" #password="ngModel"   required />
+        <div *ngIf="f.submitted && !password.valid" class="field-validation-error">Mật khẩu bắt buộc nhập</div>
+        
+        <a class="forgotpass" href="javascript:void(0);">Quên mật khẩu?</a>
+        <button type="submit" [disabled]="loading">Đăng nhập
+            <i *ngIf="loading" class="fa fa-spinner fa-spin" aria-hidden="true"></i>               
+        </button>
+        <p class="message">Chưa có tài khoản? <a href="javascript:void(0);" class="back-register">Tạo mới tài khoản</a></p>
+    
+    <p class="message">Username: tuanitpro<br/>
+    Password: 123456</p>   
+    </form>         
+
+    <form class="forgotpassword-form" style="display:none" name="form" (ngSubmit)="f.form.valid && forgotPasswordFunction()" #f="ngForm" novalidate>    
+       <p class="info">Để khôi phục lại mật khẩu, vui lòng nhập tên đăng nhập của bạn.</p>
+       <br/> <br/>
+        <input type="username"  class="form-control"  placeholder="Tên đăng nhập" name="username" [(ngModel)]="model.username" #username="ngModel"   required  />
+        <div *ngIf="f.submitted && !username.valid" class="field-validation-error">Tên đăng nhập bắt buộc nhập</div>
+         
+        
+        <button type="submit" [disabled]="loading">Gửi yêu cầu
+            <i *ngIf="loading" class="fa fa-spinner fa-spin" aria-hidden="true"></i>               
+        </button>
+           <p class="info">Đã là thành viên? <a href="javascript:void(0);" class="back-login">Đăng nhập</a>
+    
+    
+    </form>          
+</div>
+
+
+<div class="video-background">
+<div class="video-foreground">
+    <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>

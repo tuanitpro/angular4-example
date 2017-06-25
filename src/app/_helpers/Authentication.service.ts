@@ -4,13 +4,12 @@ import { Http, HttpModule, Headers, Response, RequestOptions, RequestMethod } fr
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 
-
+import { GlobalService } from '../_helpers/Global.service';
 
 @Injectable()
 export class AuthenticationService {
- private baseServiceURL:string = 'http://ec2-52-27-149-161.us-west-2.compute.amazonaws.com/oauth2/token';
- 
- constructor(private http: Http) {    }
+  
+ constructor(private http: Http, private global: GlobalService) {    }
  
  login(username:string, password:string): Observable<any>{
        
@@ -23,7 +22,7 @@ export class AuthenticationService {
     let options = new RequestOptions({
             headers: headers            
     });
-    return  this.http.post(this.baseServiceURL,postData,options)
+    return  this.http.post(this.global.BASE_API_URL_TOKEN, postData,options)
             .map((response: Response | any) =>{
                  if (response.status === 201) {
                         return false;
